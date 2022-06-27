@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Churrascômetro</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/barbecue.PNG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="containerAll" id="containerAll">
+      <a href="#containerAll" id="upBtn">
+        <p id="pUpBtn">^</p>
+      </a>
+      <header class="headerBar">
+        <img class="logoImg" src="./assets/barbecue_logo.png" alt="" />
+        <p>Churrascômetro</p>
+      </header>
+      <div class="containerSectionToDesktop">
+        <div class="containerImgDesktop">
+          <img src="./assets/churrasImg.png" alt="" />
+        </div>
+
+        <div class="scrollSection">
+          <section class="sectionContainer">
+            <p class="configText">Definições:</p>
+
+            <div class="sectionCardsContainer">
+              <div class="sectionCard">
+                <img src="./assets/persons.png" alt="" />
+                <p>Quantidade de pessoas:</p>
+                <div class="buttonSectionContainer">
+                  <div>
+                    <input
+                      oninput="inputLimitPeople()"
+                      id="peopleInput"
+                      type="number"
+                      placeholder="Pessoas"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="sectionCard">
+                <img src="./assets/pngegg.png" alt="" />
+                <p>Duração:</p>
+                <div class="buttonSectionContainer">
+                  <input
+                    oninput="inputLimitDuration()"
+                    id="durationInput"
+                    type="number"
+                    placeholder="Horas"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <a href="#meat">Carnes</a>
+              <a href="#sideDishes">Acompanhamentos</a>
+              <a href="#drink">Bebidas</a>
+            </div>
+
+            <div class="listMenuContainer" id="listMenuContainerId">
+              <div id="meat" class="menuContainer">
+                <p>Carnes:</p>
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 12.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Carnes Vermelhas</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="redMeat"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 4.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Frango</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="chicken"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/Rectangle 23.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Linguiças</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="sausage"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div id="sideDishes" class="menuContainer">
+                <p>Acompanhamentos:</p>
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 8.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Arroz branco</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="rice"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 6.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Farofa</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="crumbs"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 10.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Molho à campanha</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="sauce"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/image 9.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Pão de alho</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="bread"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div id="drink" class="menuContainer">
+                <p>Bebidas:</p>
+                <div class="cardMenuContainer">
+                  <img src="./assets/Rectangle 25.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Refrigerantes</h2>
+                      <p>Selecione:</p>
+                    </div>
+                    <input
+                      id="soda"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/Rectangle 27.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Cervejas</h2>
+                      <p>Selecione</p>
+                    </div>
+                    <input
+                      id="beer"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="cardMenuContainer">
+                  <img src="./assets/Rectangle 26.png" alt="" />
+                  <div class="cardMenuInfo">
+                    <div class="quantContainer">
+                      <h2>Sucos</h2>
+                      <p>Selecione:</p>
+                    </div>
+                    <input
+                      id="juice"
+                      name=""
+                      class="checkboxBtn"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="calculate" id="open">Calcular</button>
+            <div class="fakeBody">
+              <div class="modal-Container" id="modalContainer">
+                <div id="modal">
+                  <h1>Você vai precisar de:</h1>
+                  <div id="modalId"></div>
+                  <button id="close">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="footerSocial">
+          <h3>Developed By</h3>
+          <div class="linksContainer">
+            <a
+              href="https://www.linkedin.com/in/thyago-monnerat-8a2730235/"
+              target="_blank"
+              >Thyago Monnerat</a
+            >
+
+            <a
+              href="https://www.linkedin.com/in/ruan-carneiro-1b5464210/"
+              target="_blank"
+              >Ruan Carneiro</a
+            >
+          </div>
+
+          <div class="footerEnd">
+            <p>©2022 Churrascômetro</p>
+            <p>Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
